@@ -88,6 +88,6 @@ $(function () {
     }
   ], {
     container: '#blueimp-video-carousel',
-    carousel: true
+    carousel: false
   })
 })
