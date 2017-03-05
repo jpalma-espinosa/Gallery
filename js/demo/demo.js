@@ -20,7 +20,7 @@ $(function () {
     data: {
       format: 'json',
       method: 'flickr.interestingness.getList',
-      api_key: '7617adae70159d09ba78cfec73c13be3' // jshint ignore:line
+      api_key: 'afdfd937e57ae9c25a0d84877a17fdc2' // 
     },
     dataType: 'jsonp',
     jsonp: 'jsoncallback'
