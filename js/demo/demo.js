@@ -19,8 +19,9 @@ $(function () {
     url: 'https://api.flickr.com/services/rest/',
     data: {
       format: 'json',
-      method: 'flickr.interestingness.getList',
-      api_key: 'afdfd937e57ae9c25a0d84877a17fdc2' // 
+      method: 'flickr.photosets.getPhotos',
+      api_key: 'afdfd937e57ae9c25a0d84877a17fdc2' // jshint ignore:line
+      photoset_id: '72157642815885254'
     },
     dataType: 'jsonp',
     jsonp: 'jsoncallback'
@@ -29,7 +30,7 @@ $(function () {
     var linksContainer = $('#links')
     var baseUrl
     // Add the demo images as links with thumbnails to the page:
-    $.each(result.photos.photo, function (index, photo) {
+    $.each(result.photoset.photo, function (index, photo) {
       baseUrl = 'https://farm' + photo.farm + '.static.flickr.com/' +
       photo.server + '/' + photo.id + '_' + photo.secret
       $('<a/>')
